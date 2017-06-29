@@ -1,0 +1,114 @@
+<div class="container">
+    <h2><oda-label oda-label-value="oda-resetPwd.title"/></h2>
+    <p>
+        <oda-label oda-label-value="oda-resetPwd.intro"/><span id="userCode" style="font-weight: bolder"></span>
+    </p>
+    <div class="row">
+        <div class="col-md-12">
+            <oda-input-text
+                oda-input-text-name="email"
+                oda-input-text-type="mail"
+                oda-input-text-label="oda-main.contact-mail"
+                oda-input-text-tips="oda-main.contact-mail-tips"
+                oda-input-text-placeholder="oda-main.contact-mail-placeholder"
+                oda-input-text-check="Oda.Regexs:mail"
+                required/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <oda-input-text 
+                oda-input-text-name="pwd" 
+                oda-input-text-type="password" 
+                oda-input-text-label="oda-main.password" 
+                oda-input-text-tips="oda-main.io-pass-tips" 
+                oda-input-text-advice="oda-main.io-pass-advice"
+                oda-input-text-placeholder="oda-main.io-pass-placeholder" 
+                oda-input-text-paste="false" 
+                oda-input-text-check="Oda.Regexs:password"
+                required>
+        </div>
+        <div class="col-md-6">
+            <oda-input-text 
+                oda-input-text-name="pwd2" 
+                oda-input-text-type="password" 
+                oda-input-text-label="oda-resetPwd.Confirmpassword" 
+                oda-input-text-tips="oda-main.io-pass-tips" 
+                oda-input-text-advice="oda-main.io-pass-advice"
+                oda-input-text-placeholder="oda-main.io-pass-placeholder" 
+                oda-input-text-paste="false" 
+                oda-input-text-check="Oda.Regexs:password"
+                required/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <oda-btn oda-btn-name="submit" oda-btn-style="primary" oda-btn-enter="1" oda-btn-click="$.Oda.Controller.ResetPwd.reset();" disabled>oda-main.bt-submit</oda-btn>
+                <oda-btn oda-btn-style="info" oda-btn-click="$.Oda.Router.navigateTo({'route':'home','args':[]});">oda-main.bt-back</oda-btn>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    $.Oda.Controller.ResetPwd = {
+        "userCode":null,
+        /**
+         * @returns {$.Oda.Controller.ResetPwd}
+         */
+        start: function () {
+            try {
+                var params = $.Oda.Tooling.getParameterGet({url: $.Oda.Context.window.location});
+                var data = $.Oda.Tooling.odaCryptToString(params.token);
+                data = JSON.parse(data);
+                if(!data.hasOwnProperty("userCode") || !data.hasOwnProperty("valideDate")){
+                    $.Oda.Log.error("Token for reset password not valid");
+                    $.Oda.Router.routes["404"].go();
+                }else if((data.userCode !== undefined) && (data.userCode !== "") && (data.valideDate !== undefined) && (data.valideDate < new Date())){
+                    $('#userCode').html(data.userCode);
+                    $.Oda.Controller.ResetPwd.userCode = data.userCode;
+                    $.Oda.Scope.Gardian.add({
+                        id : "resetPwd",
+                        listElt : ["email","pwd", "pwd2"],
+                        function : function(params){
+                            if( ($("#email").data("isOk")) && ($("#pwd").data("isOk")) && ($("#pwd2").data("isOk")) && ($("#pwd").val() === $("#pwd2").val()) ){
+                                $("#submit").btEnable();
+                            }else{
+                                $("#submit").btDisable();
+                            }
+                        }
+                    });
+                }else{
+                    $.Oda.Log.error("Token params for reset password not valid");
+                    $.Oda.Router.routes["404"].go();
+                }
+                return this;
+            } catch (er) {
+                $.Oda.Log.error("$.Oda.Controller.ResetPwd.start : " + er.message);
+                return null;
+            }
+        },
+        /**
+         * @returns {$.Oda.Controller.ResetPwd}
+         */
+        reset: function () {
+            try {
+                var tabInput = {
+                    "userCode": $.Oda.Controller.ResetPwd.userCode,
+                    "pwd" : $("#pwd").val(),
+                    "email": $("#email").val()
+                };
+                var call = $.Oda.Interface.callRest($.Oda.Context.rest+"vendor/happykiller/oda/resources/api/user/pwd/", {"type": "put", callback : function(response){
+                    $.Oda.Router.navigateTo({'route':'home','args':[]});
+                }},tabInput);
+                return this;
+            } catch (er) {
+                $.Oda.Log.error("$.Oda.Controller.ResetPwd.start : " + er.message);
+                return null;
+            }
+        }
+    };
+    
+    $.Oda.Controller.ResetPwd.start();
+</script>

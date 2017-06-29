@@ -1,0 +1,103 @@
+<script id="oda-notification-tpl" type="text/template">
+    <div style="position:fixed;bottom:10px;width:80%;left:50%;margin-left:-40%;z-index:99999999999999;" id="oda-notification"></div>
+</script>
+
+<script id="oda-notification-message-tpl" type="text/template">
+    <div class="alert alert-{{type}} alert-dismissible" style="text-align:center;" id="oda-notification-{{id}}">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{message}}
+    </div>
+</script>
+
+<script id="oda-popup-tpl" type="text/template">
+    <div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true" id="{{name}}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="{{name}}_label">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid" id="{{name}}_content">
+                        Hello World
+                    </div>
+                </div>
+                <div class="modal-footer" id="{{name}}_footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="oda-widget-input-text-tpl" type="text/template">
+<div class="form-group">
+    <label for="{{name}}" style="{{labelDisplay}}">{{label}}&nbsp;{{requiredStart}}</label>
+    <div class="{{adviceDisplayInput}}">
+        <input type="{{type}}" class="form-control" name="{{name}}" id="{{id}}" title="{{tips}}" value="{{value}}" {{requiredBalise}} {{disabledBalise}}>
+        <span class="input-group-btn" style="{{adviceDisplay}}">
+            <button type="button"
+                class="btn btn-default"
+                data-container="body"
+                data-trigger="focus"
+                data-html="true"
+                data-toggle="popover"
+                data-placement="auto" 
+                data-content="{{advice}}">?</button>
+        </span>
+    </div>
+    <span style="color:#a1a1a1;{{tipsDisplay}}">&nbsp;</span>
+</div>
+</script>
+
+<script id="oda-widget-input-area-tpl" type="text/template">
+<div class="form-group">
+    <label for="{{name}}" style="{{labelDisplay}}">{{label}}&nbsp;{{requiredStart}}</label>
+    <textarea rows={{hight}} class="form-control" name="{{name}}" id="{{id}}" {{requiredBalise}} {{disabledBalise}} title="{{tips}}">{{value}}</textarea>
+    <span style="color:#a1a1a1;{{tipsDisplay}}">&nbsp;</span>
+</div>
+</script>
+
+<script id="oda-widget-input-checkbox-tpl" type="text/template">
+<div class="form-group">
+    <label for="{{name}}" style="{{labelDisplay}}">{{label}}&nbsp;{{requiredStart}}</label>
+    <div class="checkbox">
+        <input type="checkbox" name="{{name}}" id="{{id}}" {{requiredBalise}} {{disabledBalise}} title="{{tips}}" {{(value==='1'||value==='true')?'checked':''}}>
+        <label>{{tips}}</label>
+    </div>
+</div>
+</script>
+
+<script id="oda-widget-input-select-tpl" type="text/template">
+<div class="form-group">
+    <label for="{{name}}" style="{{labelDisplay}}">{{label}}&nbsp;{{requiredStart}}</label>
+    <select name="{{name}}" id="{{id}}" {{requiredBalise}} {{disabledBalise}} title="{{tips}}" class="form-control"></select>
+</div>
+</script>
+
+<script id="oda-loading-tpl" type="text/template">
+<div class="oda-loader-container">
+    <div class="oda-loader">
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-dot"></div>
+        <div class="oda-loader-text"></div>
+    </div>
+</div>
+</script>
+
+<script id="oda-avatar-tpl" type="text/template">
+<div style="height:{{height}}px;width:{{width}}px;position:relative;">
+    <img src="{{src}}" class="iconProfile img-rounded" name="{{name}}" id="{{name}}" height="{{imgHeight}}" width="{{imgWidth}}" style="position:absolute;top:50%;left:50%;margin-left:-{{imgWidthDec}}px;margin-top:-{{imgHeightDec}}px;">
+</div>
+</script>
+
+<script id="oda-message-tpl" type="text/template">
+<div class="alert alert-{{alertType}} alert-dismissible" id="oda-message-{{id}}" style="width:90%;margin-left:auto;margin-right:auto;">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="$.Oda.Display.Message.hide({id:{{id}}});"><span aria-hidden="true">&times;</span></button>
+    {{message}}
+</div>
+</script>

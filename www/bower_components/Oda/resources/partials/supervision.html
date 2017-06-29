@@ -1,0 +1,163 @@
+<div class="container">
+    <h2><oda-label oda-label-value="oda-supervision.title"/></h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><oda-label oda-label-value="oda-supervision.metrics-interface"/></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" id="div_metrics_interface">
+                            <oda-loading></oda-loading>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><oda-label oda-label-value="oda-supervision.maintenance"/></div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" id="div_maintenance">
+                            <oda-loading></oda-loading>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $.Oda.Controller.Supervision = {
+        /**
+         * @returns {$.Oda.Controller.Supervision}
+         */
+        start: function() {
+            try {
+                $.Oda.Controller.Supervision.chargerMetricsInterface();
+                $.Oda.Controller.Supervision.chargerMaintenance(false);
+                return this;
+            } catch (er) {
+                $.Oda.Log.error("$.Oda.Controller.Supervision.start: " + er.message);
+                return null;
+            }
+        },
+        /**
+         * @returns {$.Oda.Controller.Supervision}
+         */
+        chargerMetricsInterface: function() {
+            try {
+                $('#div_metrics_interface').html('<oda-loading/>');
+                $.Oda.Interface.callRest($.Oda.Context.rest+"vendor/happykiller/oda/resources/api/sys/report/interfaceMetric", { callback: function(response){
+                    var strhtml = '<table width="60em" cellpadding="0" cellspacing="0" border="0" class="display" id="table_metrics_interface" style="width: 100%"></table>';
+                    $('#div_metrics_interface').html(strhtml);
+
+                    var objDataTable = $.Oda.Tooling.objDataTableFromJsonArray(response.data);
+                    var oTable = $('#table_metrics_interface').dataTable( {
+                        "sPaginationType": "full_numbers",
+                        "aaData": objDataTable.data,
+                        "aaSorting": [[2,'desc']],
+                        "aoColumns": [
+                            { sTitle: "Interface", sClass: "left", sWidth: "5em" },
+                            { sTitle: "Nb", sClass: "center", sWidth: "5em" },
+                            { sTitle: "Cost", sClass: "center", sWidth: "5em" },
+                            { sTitle: "average", sClass: "center", sWidth: "5em" },
+                            { sTitle: "maxTime", sClass: "center", sWidth: "5em" },
+                            { sTitle: "minTime", sClass: "center", sWidth: "5em" }
+                        ],
+                        aoColumnDefs: [
+                            {//Interface
+                                mRender: function ( data, type, row ) {
+                                    var interface = row[0];
+                                    var tab = interface.split("/");
+                                    var name = tab[tab.length-1].replace(".php","");
+                                    return name;
+                                },
+                                aTargets: [ 0 ]
+                            },
+                            {//Nb
+                                mRender: function ( data, type, row ) {
+                                    return row[1];
+                                },
+                                aTargets: [ 1 ]
+                            },
+                            {//Cost
+                                mRender: function ( data, type, row ) {
+                                    return row[2];
+                                },
+                                aTargets: [ 2 ]
+                            },
+                            {//average
+                                mRender: function ( data, type, row ) {
+                                    return row[3];
+                                },
+                                aTargets: [ 3 ]
+                            },
+                            {//maxTime
+                                mRender: function ( data, type, row ) {
+                                    return row[4];
+                                },
+                                aTargets: [ 4 ]
+                            },
+                            {//minTime
+                                mRender: function ( data, type, row ) {
+                                    return row[5];
+                                },
+                                aTargets: [ 5 ]
+                            }
+                        ],
+                        "fnDrawCallback": function (oSettings) {
+                            $('#table_metrics_interface')
+                                .removeClass('display')
+                                .addClass('table table-striped table-bordered');
+                        }
+                    });
+                }});
+                return this;
+            } catch (er) {
+                $.Oda.Log.error("$.Oda.Controller.Supervision.chargerMetricsInterface: " + er.message);
+                return null;
+            }
+        },
+        /**
+        * @name chargerMaintenance
+        * @desc Hello
+        * @return {$.Oda.Controller.Supervision}
+        */
+        chargerMaintenance: function(p_execution){
+            try {
+                $('#div_maintenance').html('<oda-loading/>');
+                $.Oda.Interface.callRest($.Oda.Context.rest+"vendor/happykiller/oda/resources/api/sys/cleanDb/", {type: "post", callback: function(p_retour){
+                    var strhtml = "Volume des tables syst&egrave;mes : <br>";
+                    var datas = p_retour["data"]["resultat"]["data"];
+                    for (var indice in datas){
+                        strhtml += "- Nombre de ligne dans '"+datas[indice]["table"]+ "' : " +datas[indice]["nb"]+ "<br>";
+                    }
+
+                    if(p_retour["data"]["exec"] == "true"){
+                        strhtml += '<br>R&eacute;sultat de la purge : <br>';
+                        var datas = p_retour["data"]["purges"];
+                        for (var indice in datas){
+                            strhtml += "- Purge dans '"+datas[indice]["table"]+ "', statut : " +datas[indice]["statut"]+ " (Nb lignes : "+datas[indice]["nb"]+")<br>";
+                        }
+                    }
+
+                    strhtml += '<oda-btn oda-btn-style="danger" oda-btn-icon-before="remove" oda-btn-click="$.Oda.Controller.Supervision.chargerMaintenance(true);">oda-supervision.purge</oda-btn>';
+
+                    $('#div_maintenance').html(strhtml);
+                }}, { 
+                    exec: p_execution
+                });
+
+                return this;
+            } catch (er) {
+                $.Oda.Log.error("$.Oda.Controller.Supervision.chargerMaintenance : " + er.message);
+                return null;
+            }
+        }
+    };
+
+    $.Oda.Controller.Supervision.start();
+</script>

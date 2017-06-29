@@ -1,0 +1,18 @@
+[
+  {
+    "key" : "/navigation/rank/",
+    "ttl" : 86400
+  },{
+    "key" : "/rank/",
+    "ttl" : 86400
+  },{
+    "key" : "/navigation/right/",
+    "ttl" : 3600
+  },{
+    "key" : "/sys/param/",
+    "ttl" : 60
+  },{
+    "key" : "/sys/offline",
+    "ttl" : 1
+  }
+]

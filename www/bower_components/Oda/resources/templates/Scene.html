@@ -1,0 +1,61 @@
+<script id="oda-scene-tpl" type="text/template">
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" id="menuSlide">
+                <li class="sidebar-brand" id="profileDisplay"><oda-label oda-label-value="oda-project.userLabel"/></li>
+                <li class="divider"></li>
+                <li><a onclick="$.Oda.Router.navigateTo({'route':'contact','args':{}});"><oda-label oda-label-value="oda-main.contact"/></a></li>
+            </ul>
+        </div>
+        <!-- /Sidebar -->
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-menu">
+                        <span class="sr-only">For mobile nav</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="margin-top:-13px;" id="linkAvatar">
+                        <oda-avatar oda-avatar-user="" oda-avatar-name="avatar" oda-avatar-height="45" oda-avatar-width="45"/>
+                    </a>
+                    <oda-guidance oda-guidance-id="linkAvatar" oda-guidance-next="true">oda-main.guidance-label-avatar</oda-guidance>
+                    <a class="navbar-brand" onclick="$.Oda.Router.navigateTo({'route':'home','args':{}});" id="projectLabel">Project</a>
+                    <oda-guidance oda-guidance-id="projectLabel" oda-guidance-next="true">oda-main.guidance-label-brand</oda-guidance>
+                </div>
+
+                <div class="collapse navbar-collapse" id="collapsable-menu">
+                    <ul class="nav navbar-nav" id="menu">
+                        <!-- Menu -->
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- content -->
+        <div id="oda-content"><oda-loading></oda-loading></div>
+        <!-- /content -->
+
+    </div>
+    <!-- /wrapper -->
+</script>
+
+<script id="oda-scene-menuSlide-logged-tpl" type="text/template">
+    <li class="sidebar-brand"><a onclick="$.Oda.Router.navigateTo({'route':'profile','args':{}});">{{firstName}} {{lastName}}</a></li>
+    <li><a onclick="$.Oda.Router.navigateTo({'route':'profile','args':{}});"><oda-label oda-label-value="oda-main.profile"/></a></li>
+    <li><a onclick="$.Oda.Router.navigateTo({'route':'contact','args':{}});"><oda-label oda-label-value="oda-main.contact"/></a></li>
+    <li><a onclick="$.Oda.Security.logout();"><oda-label oda-label-value="oda-main.logout"/></a></li>
+</script>
+
+<script id="oda-scene-menuSlide-default-tpl" type="text/template">
+    <li class="sidebar-brand" id="profileDisplay"><oda-label oda-label-value="oda-project.userLabel"/></li>
+    <li class="divider"></li>
+    <li><a onclick="$.Oda.Router.navigateTo({'route':'contact','args':{}});"><oda-label oda-label-value="oda-main.contact"/></a></li>
+</script>

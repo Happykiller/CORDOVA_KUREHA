@@ -1,0 +1,655 @@
+[{
+    "groupName": "oda-main",
+    "fr": {
+        "authentication": "Authentification",
+        "login": "Indentifiant",
+        "password": "Mot de passe",
+        "io-login": "Entrer votre identifiant",
+        "io-login-tips": "Au moins 3 lettres",
+        "io-login-placeholder": "Au moins 3 lettres",
+        "io-login-advice": "Le <b>code</b> utilisateur",
+        "io-pass": "Entrer votre mot de passe",
+        "io-pass-placeholder": "Au moins 4 lettres",
+        "io-pass-tips": "Au moins 4 lettres",
+        "io-pass-advice": "Au moins 4 lettres",
+        "bt-submit": "Soumettre",
+        "logout": "Quitter",
+        "profile": "Mon profil",
+        "contact": "Contactez-nous",
+        "contact-name": "Votre nom :",
+        "contact-name-tips": "Au moins 3 lettres",
+        "contact-name-advice": "Au moins 3 lettres",
+        "contact-name-placeholder": "Votre nom ici",
+        "contact-mail": "Votre E-mail :",
+        "contact-mail-tips": "Au format mail monmail@dom.ext",
+        "contact-mail-advice": "Au format mail monmail@dom.ext",
+        "contact-mail-placeholder": "Votre e-mail ici",
+        "contact-msg": "Votre message :",
+        "contact-msg-tips": "Au moins 25 lettres",
+        "contact-msg-placeholder": "Votre message ici",
+        "bt-forgot": "Un Oublie ?",
+        "bt-subscrib": "S'inscrire",
+        "bt-google": "Entrer avec Google",
+        "forgot-title": "Oublié ?",
+        "404-title": "Pas trouvé.",
+        "home-title": "Accueil",
+        "bt-back": "Retour",
+        "forgot-intro": "Veuiller remplir les champs possibles pour vous retrouver :",
+        "subscrib-title": "Créer un compte",
+        "subscrib-intro": "Afin de créer un compte merci de fournir les informations utilies.",
+        "subscrib-firstName": "Nom :",
+        "subscrib-firstName-tips": "Au moins 3 lettres",
+        "subscrib-firstName-advice": "Au moins 3 lettres",
+        "subscrib-firstName-placeholder": "Votre nom ici",
+        "subscrib-lastName": "Prénom :",
+        "subscrib-lastName-tips": "Au moins 3 lettres",
+        "subscrib-lastName-advice": "Au moins 3 lettres",
+        "subscrib-lastName-placeholder": "Votre nom ici",
+        "profile-title": "Mon Profil",
+        "profile-infos": "Mes informations",
+        "bt-cancel": "Annuler",
+        "bt-edit": "Editer",
+        "bt-close": "Fermer",
+        "bt-delete": "Supprimer",
+        "select-default": "Choisir une option",
+        "new": "Nouveau",
+        "add": "Ajouter",
+        "all": "Tous",
+        "guidance": "Aide",
+        "guidance-read": "Lu",
+        "guidance-label-avatar": "Pour affichier le menu, cliquer",
+        "guidance-label-brand": "Pour rejoindre l'accueil",
+        "test": "Ceci est un test => var1:{{var1}}, var2:{{var2}}."
+    },
+    "en": {
+        "authentication": "Authentication",
+        "login": "Login",
+        "password": "Password",
+        "io-login": "Enter your login",
+        "io-pass": "Enter your password",
+        "io-pass-tips": "More than 4 letters",
+        "io-pass-placeholder": "More than 4 letters",
+        "io-pass-advice": "More than 4 letters",
+        "io-login-tips": "More than 3 letters",
+        "io-login-advice": "The user <b>code</b>",
+        "bt-submit": "Submit",
+        "logout": "Logout",
+        "profile": "Your profile",
+        "contact": "Contact us",
+        "contact-name": "Your name:",
+        "contact-name-tips": "More than 3 letters",
+        "contact-name-advice": "More than 3 letters",
+        "contact-name-placeholder": "Your name here",
+        "contact-mail": "Your Email: ",
+        "contact-mail-tips": "Format mail monmail@dom.ext",
+        "contact-mail-advice": "Format mail monmail@dom.ext",
+        "contact-mail-placeholder": "Your email here",
+        "contact-msg": "Your message:",
+        "contact-msg-tips": "More than 25 letters",
+        "contact-msg-placeholder": "Your message here :",
+        "bt-forgot": "Forgotten ?",
+        "bt-subscrib": "Subscribe",
+        "bt-google": "Enter with Google",
+        "forgot-title": "Forgot ?",
+        "404-title": "Not found.",
+        "home-title": "Home",
+        "bt-back": "Back",
+        "forgot-intro": "Kindly fill the possible fields to find yourself:",
+        "subscrib-title": "Create an account",
+        "subscrib-intro": "Thank you to create an account to provide the useful information.",
+        "subscrib-firstName": "First name:",
+        "subscrib-firstName-tips": "More than 3 letters",
+        "subscrib-firstName-advice": "More than 3 letters",
+        "subscrib-firstName-placeholder": "Your first name here",
+        "subscrib-lastName": "Last Name:",
+        "subscrib-lastName-tips": "More than 3 letters",
+        "subscrib-lastName-advice": "More than 3 letters",
+        "subscrib-lastName-placeholder": "Your last name here",
+        "profile-title": "My Profile",
+        "profile-infos": "My informations",
+        "bt-cancel": "Cancel",
+        "bt-edit": "Edit",
+        "bt-close": "Close",
+        "bt-delete": "Delete",
+        "select-default": "Choose option",
+        "new": "New",
+        "add": "Add",
+        "all": "All",
+        "guidance": "Guidance",
+        "guidance-read": "Check",
+        "guidance-label-avatar": "For display system menu, click.",
+        "guidance-label-brand": "To go home click.",
+        "test": "This is a test => var1:{{var1}}, var2:{{var2}}."
+    },
+    "es": {
+        "authentication": "Autenticación",
+        "login": "Iniciar sesión",
+        "password": "Contraseña",
+        "io-login": "Introduzca su nombre de usuario",
+        "io-pass": "Introduzca su contraseña",
+        "io-pass-tips": "Más de 4 letras",
+        "io-pass-placeholder": "Más de 4 letras",
+        "io-pass-advice": "Más de 4 letras",
+        "io-login-tips": "Más de 3 letras",
+        "io-login-advice": "El <b>código</b> de usuario",
+        "bt-submit": "Enviar",
+        "logout": "Cerrar sesión",
+        "profile": "Tu perfil",
+        "contact": "Contáctenos",
+        "contact-name": "Tu nombre:",
+        "contact-name-tips": "Más de 3 letras",
+        "contact-name-advice": "Más de 3 letras",
+        "contact-name-placeholder": "Tu nombre aquí",
+        "contact-mail": "Tu Email: ",
+        "contact-mail-tips": "Formato de correo monmail@dom.ext",
+        "contact-mail-advice": "Formato de correo monmail@dom.ext",
+        "contact-mail-placeholder": "Tu email aquí",
+        "contact-msg": "Tu mensaje :",
+        "contact-msg-tips": "Más de 25 letras",
+        "contact-msg-placeholder": "Tu message aquí:",
+        "bt-forgot": "Olvidado ?",
+        "bt-subscrib": "Suscribirse",
+        "bt-google": "Ingresa con Google",
+        "forgot-title": "Olvidó ?",
+        "404-title": "Extraviado.",
+        "home-title": "Portada ",
+        "bt-back": "Espalda",
+        "forgot-intro": "Por favor llene los campos posibles para encontrarse:",
+        "subscrib-title": "Create an account",
+        "subscrib-intro": "Thank you to create an account to provide the useful information.",
+        "subscrib-firstName": "Nombre de pila:",
+        "subscrib-firstName-tips": "Más de 3 letras",
+        "subscrib-firstName-advice": "Más de 3 letras",
+        "subscrib-firstName-placeholder": "Nombre de pila aquí",
+        "subscrib-lastName": "Apellido:",
+        "subscrib-lastName-tips": "Más de 3 letras",
+        "subscrib-lastName-advice": "Más de 3 letras",
+        "subscrib-lastName-placeholder": "Apellido aquí",
+        "profile-title": "Mi perfil",
+        "profile-infos": "Mis informaciones",
+        "bt-cancel": "Cancelar",
+        "bt-edit": "Editar",
+        "bt-close": "Cerca",
+        "bt-delete": "Borrar",
+        "select-default": "Elija la opción",
+        "new": "Nuevo",
+        "add": "Añadir",
+        "all": "Todas",
+        "guidance": "Ayuda",
+        "guidance-read": "Leer",
+        "guidance-label-avatar": "Para el menú sistema de visualización, clic.",
+        "guidance-label-brand": "Para volver a casa clic.",
+        "test": "Esto es una prueba => var1:{{var1}}, var2:{{var2}}."
+    }
+}, {
+    "groupName": "oda-menu",
+    "fr": {
+        "home": "Accueil",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "stats": "Statistiques",
+        "admin": "Administration",
+        "supervision": "Supervision",
+        "profile": "Profile"
+    },
+    "en": {
+        "home": "Home",
+        "contact": "Contact",
+        "faq": "FAQ",
+        "stats": "Statistiques",
+        "admin": "Administration",
+        "supervision": "Supervision",
+        "profile": "Profile"
+    },
+    "es": {
+        "home": "Portada",
+        "contact": "Contacto",
+        "faq": "FAQ",
+        "stats": "Estadística",
+        "admin": "Administración",
+        "supervision": "Supervisión",
+        "profile": "Perfil"
+    }
+}, {
+    "groupName": "oda-menu-cate",
+    "fr": {
+        "home": "Accueil",
+        "admin": "Administration",
+        "manage": "Gestion",
+        "reports": "Rapports",
+        "extLink": "Liens externes"
+    },
+    "en": {
+        "home": "Accueil",
+        "admin": "Administration",
+        "manage": "Manage",
+        "reports": "Reports",
+        "extLink": "External links"
+    },
+    "es": {
+        "home": "Portada",
+        "admin": "Administración",
+        "manage": "Dirección",
+        "reports": "Relaciones",
+        "extLink": "Enlaces externos"
+    }
+}, {
+    "groupName": "oda-rank",
+    "fr": {
+        "admin": "Administrateur",
+        "supervisor": "Superviseur",
+        "responsible": "Responsable",
+        "user": "Utilisateur",
+        "visitor": "Visiteur"
+    },
+    "en": {
+        "admin": "Administrator",
+        "supervisor": "Supervisor",
+        "responsible": "Responsible",
+        "user": "User",
+        "visitor": "Visitor"
+    },
+    "es": {
+        "admin": "Administrador",
+        "supervisor": "Supervisor",
+        "responsible": "Responsable",
+        "user": "Usuario",
+        "visitor": "Visitante"
+    }
+}, {
+    "groupName": "oda-project",
+    "fr": {
+        "projectName": "Mon Projet",
+        "userLabel": "L'utillisateur"
+    },
+    "en": {
+        "projectName": "My Project",
+        "userLabel": "The user"
+    },
+    "es": {
+        "projectName": "My Project",
+        "userLabel": "The user"
+    }
+}, {
+    "groupName": "oda-stats",
+    "fr": {
+        "title": "Les statistiques",
+        "activityByPage": "Répartition de l'activité par page",
+        "activityByUser": "Répartition de l'activité par utilisateur"
+    },
+    "en": {
+        "title": "Statistics",
+        "activityByPage": "Activity by page",
+        "activityByUser": "Activity by user"
+    },
+    "es": {
+        "title": "Statistics",
+        "activityByPage": "Activity by page",
+        "activityByUser": "Activity by user"
+    }
+}, {
+    "groupName": "oda-admin",
+    "fr": {
+        "title": "Administration",
+        "messages": "Messages",
+        "users": "Utilisateurs",
+        "list": "Liste de diffusion",
+        "edit_mail": "Email : ",
+        "edit_desc": "Description : ",
+        "edit_actif": "Actif : ",
+        "input_rang": "Rang : ",
+        "bt-create-new-message": "Créer un message",
+        "userUpdateOk": "Modification ok.",
+        "messageCreateOk": "Message bien enregistré.",
+        "messageCreateMessage": "Message",
+        "messageCreateAlertLevel": "Niveau d'alerte",
+        "messageCreateAlertLevelInfo": "Information",
+        "messageCreateAlertLevelDanger": "Critique",
+        "messageCreateAlertLevelWarning": "Avertissement",
+        "messageCreateAlertLevelSuccess": "Succès",
+        "messageCreateProfileLevel": "Profile minimum",
+        "messageCreateDelay": "Date d'expiration (7J par defaut)",
+        "user": "Utilisateur",
+        "codeUser": "Code utilisateur",
+        "mail": "Mail",
+        "desc": "Description",
+        "active": "Actif",
+        "rank": "Rang",
+        "actions": "Actions"
+    },
+    "en": {
+        "title": "Administration",
+        "messages": "Messages",
+        "users": "Users",
+        "list": "List of mail",
+        "edit_mail": "Email : ",
+        "edit_desc": "Description : ",
+        "edit_actif": "Active : ",
+        "input_rang": "Profile : ",
+        "bt-create-new-message": "Create new message",
+        "userUpdateOk": "Update success.",
+        "messageCreateOk": "Message creation success.",
+        "messageCreateMessage": "Message",
+        "messageCreateAlertLevel": "Alert level",
+        "messageCreateAlertLevelInfo": "Information",
+        "messageCreateAlertLevelDanger": "Critical",
+        "messageCreateAlertLevelWarning": "Warning",
+        "messageCreateAlertLevelSuccess": "Success",
+        "messageCreateProfileLevel": "Profile",
+        "messageCreateDelay": "Expiration date (7D by default)",
+        "user": "User",
+        "userCode": "User code",
+        "mail": "Mail",
+        "desc": "Description",
+        "active": "Active",
+        "rank": "Rank",
+        "actions": "Actions"
+    },
+    "es": {
+        "title": "Administración",
+        "messages": "Mensajes",
+        "users": "Usuarios",
+        "list": "Lista de correo",
+        "edit_mail": "Email : ",
+        "edit_desc": "Descripción : ",
+        "edit_actif": "Activo : ",
+        "input_rang": "Perfil : ",
+        "bt-create-new-message": "Crear nuevo mensaje",
+        "userUpdateOk": "Actualizar el éxito.",
+        "messageCreateOk": "Éxito de creación de mensajes.",
+        "messageCreateMessage": "Mensajes",
+        "messageCreateAlertLevel": "Nivel de alerta",
+        "messageCreateAlertLevelInfo": "Información",
+        "messageCreateAlertLevelDanger": "Crítico",
+        "messageCreateAlertLevelWarning": "Advertencia",
+        "messageCreateAlertLevelSuccess": "Exitoso",
+        "messageCreateProfileLevel": "Perfil",
+        "messageCreateDelay": "Fecha de vencimiento (7D por defecto)",
+        "user": "Usuarios",
+        "codeUser": "Codigo de usuario",
+        "mail": "Mail",
+        "desc": "Descripción",
+        "active": "Activo",
+        "rank": "Rango",
+        "actions": "Acción"
+    }
+}, {
+    "groupName": "oda-supervision",
+    "fr": {
+        "title": "Supervision",
+        "metrics-interface": "Métriques des interfaces",
+        "maintenance": "Maintenance",
+        "purge": "Lancer la purge"
+    },
+    "en": {
+        "title": "Supervision",
+        "metrics-interface": "Metrics interfaces",
+        "maintenance": "Maintenance",
+        "purge": "Start purge"
+    },
+    "es": {
+        "title": "Supervision",
+        "metrics-interface": "Metrics interfaces",
+        "maintenance": "Maintenance",
+        "purge": "Start purge"
+    }
+}, {
+    "groupName": "oda-datatables",
+    "fr": {
+        "zeroRecords": "Rien trouvé.",
+        "info": "Affiche page _PAGE_ sur _PAGES_",
+        "infoEmpty": "Pas d'enregristrement disponible",
+        "infoFiltered": "(Filtré depuis _MAX_ sur un total)",
+        "lengthMenu": "Voir _MENU_ entrées",
+        "search": "Rechercher :",
+        "paginate": {
+            "first": "Premier",
+            "last": "Dernier",
+            "next": "Suivant",
+            "previous": "Précédent"
+        }
+    },
+    "en": {
+        "zeroRecords": "Nothing found - sorry",
+        "info": "Showing page _PAGE_ of _PAGES_",
+        "infoEmpty": "No records available",
+        "infoFiltered": "(filtered from _MAX_ total records)",
+        "lengthMenu": "Show _MENU_ entries",
+        "search": "Search:",
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        }
+    },
+    "es": {
+        "zeroRecords": "Nothing found - sorry",
+        "info": "Showing page _PAGE_ of _PAGES_",
+        "infoEmpty": "No records available",
+        "infoFiltered": "(filtered from _MAX_ total records)",
+        "lengthMenu": "Show _MENU_ entries",
+        "search": "Search:",
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        }
+    }
+}, {
+    "groupName": "oda-forgot",
+    "fr": {
+        "unknown": "Aucune correspondance trouvée.",
+        "mailSend": "Un email pour réinitialiser votre mot de passe a été envoyé",
+        "mailSubjet": "[ODA]Récupération de votre compte."
+    },
+    "en": {
+        "title": "Reset your password",
+        "intro": "Please provide your new password ",
+        "Confirmpassword": "Confirme password :"
+    },
+    "es": {
+        "title": "Reset your password",
+        "intro": "Please provide your new password ",
+        "Confirmpassword": "Confirme password :"
+    }
+}, {
+    "groupName": "oda-resetPwd",
+    "fr": {
+        "title": "Réinitialiser son mot de passe",
+        "intro": "Veuillez saisir le nouveau mot de passe de ",
+        "Confirmpassword": "Confirmer mot de passe :"
+    },
+    "en": {
+        "title": "Reset your password",
+        "intro": "Please provide your new password ",
+        "Confirmpassword": "Confirme password :"
+    },
+    "es": {
+        "title": "Reset your password",
+        "intro": "Please provide your new password ",
+        "Confirmpassword": "Confirme password :"
+    }
+}, {
+    "groupName": "oda-profile",
+    "fr": {
+        "title": "Mon profil",
+        "infos": "Informations",
+        "uploadSuccess": "Upload réussi.",
+        "uploadError": "Erreur upload : {{msg}}",
+        "codeUser": "Code utilisateur",
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "email": "E-mail",
+        "language": "Langue",
+        "avatar": "Avatar",
+        "passwordActual": "Mot de pass actuelle",
+        "update": "Mise à jour : ",
+        "fr": "Français",
+        "en": "Anglais",
+        "es": "Espagnole",
+        "updateSuccess": "Mise à jour réussi",
+        "rank": "Rang"
+    },
+    "en": {
+        "title": "My profile",
+        "infos": "Informations",
+        "uploadSuccess": "Upload success",
+        "uploadError": "Upload error: {{msg}}",
+        "codeUser": "User code",
+        "lastName": "LastName",
+        "firstName": "FirstName",
+        "email": "E-mail",
+        "language": "Language",
+        "avatar": "Avatar",
+        "passwordActual": "Current pass word",
+        "update": "Update: ",
+        "fr": "French",
+        "en": "English",
+        "es": "Spanish",
+        "updateSuccess": "Update success",
+        "rank": "Rank"
+    },
+    "es": {
+        "title": "Mi perfil",
+        "infos": "Informaciones",
+        "uploadSuccess": "Subida exitosa",
+        "uploadError": "Error al Subir: {{msg}}",
+        "codeUser": "Código de usuario",
+        "lastName": "Nombre",
+        "firstName": "Primer nombre",
+        "email": "E-mail",
+        "language": "Idioma",
+        "avatar": "Avatar",
+        "passwordActual": "Palabra pasada actual",
+        "update": "Actualización: ",
+        "fr": "Francés",
+        "en": "Inglés",
+        "es": "Español",
+        "updateSuccess": "el éxito de actualización",
+        "rank": "fila"
+    }
+},{
+    "groupName": "oda-auth",
+    "fr": {
+        "noAccount": "Pas de compte rattaché à l'email : ",
+        "chooseAccount": "Choisir le compte."
+    },
+    "en": {
+        "noAccount": "No account for this email: ",
+        "chooseAccount": "Choose an account"
+    },
+    "es": {
+        "noAccount": "No se cuenta para este correo electrénico: ",
+        "chooseAccount": "Seleccione cuenta."
+    }
+},{
+  "groupName": "oda-calendar",
+  "fr": {
+    "monday": "Lundi",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
+    "thursday": "jeudi",
+    "friday": "Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche"
+  },
+  "en": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "es": {
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo"
+  }
+},{
+  "groupName": "oda-tests",
+  "fr": {
+    "title": "Tests",
+    "hello": "Page pour vérifier les fonctionnalités du site",
+    "tabMail": "Mails",
+    "mail-tips": "mail@dom.com",
+    "mail-placeholder": "mail@dom.com",
+    "mailSend": "Le mail a été envoyé",
+    "mailSubjet": "[ODA]Test mail.",
+    "cacheTab": "Cache",
+    "cacheHello": "Le test va récupérer le paramètre 'maintenance', avec un ttl de 60s sur le cache.",
+    "cacheAlert": "Pour tester le cache penser à être en mode DEBUG.",
+    "mockupTab": "Mockup",
+    "mockupHello": "Pour tester la fonction mockup, avec /sys/test qui n'existe pas.",
+    "offlineTab": "Offline",
+    "offlineHello": "Pour tester la fonction offline."
+  },
+  "en": {
+    "title": "Tests",
+    "hello": "Page to check site features",
+    "tabMail": "Mails",
+    "mail-tips": "mail@dom.com",
+    "mail-placeholder": "mail@dom.com",
+    "mailSend": "The mail has been sent",
+    "mailSubjet": "[ODA]Test mail.",
+    "cacheTab": "Cache",
+    "cacheHello": "The test will retrieve the 'maintenance' parameter, with a tsl of 60s on the cache..",
+    "cacheAlert": "To test the cache think of being in DEBUG mode.",
+    "mockupTab": "Mockup",
+    "mockupHello": "To test the mockup function.",
+    "offlineTab": "Offline",
+    "offlineHello": "To test the offline function."
+  },
+  "es": {
+    "title": "Pruebas",
+    "hello": "Página para verificar las características del sitio",
+    "tabMail": "Mails",
+    "mail-tips": "mail@dom.com",
+    "mail-placeholder": "mail@dom.com",
+    "mailSend": "El correo electrónico fue enviado",
+    "mailSubjet": "[ODA]Prueba de correo electrónico.",
+    "cacheTab": "Cache",
+    "cacheHello": "La prueba recuperará el parámetro 'ahora', con un 60 TTL en la portada.",
+    "cacheAlert": "Para probar el pensar en estar en modo de depuración caché.",
+    "mockupTab": "Mockup",
+    "mockupHello": "Para probar la maqueta función.",
+    "offlineTab": "Offline",
+    "offlineHello": "Para probar la offline función."
+  }
+},{
+  "groupName": "oda-navigation",
+  "fr": {
+    "title": "Navigation",
+    "hello": "Page pour gérer la navigation. (menu et droits)",
+    "mapping": "Configurer le mapping",
+    "id": "Id",
+    "label": "Label",
+    "select": "Sélectionner",
+    "updateSuccess": "Mise à jour réussi."
+  },
+  "en": {
+    "title": "Navigation",
+    "hello": "Page to manage navigation. (Menu and rights)",
+    "mapping": "Configurer the mapping",
+    "id": "Id",
+    "label": "Label",
+    "select": "To select",
+    "updateSuccess": "Update success."
+  },
+  "es": {
+    "title": "Navegación",
+    "hello": "Página para gestionar la navegación. (Menú y derechos)",
+    "mapping": "Configurar la asignación",
+    "id": "Id",
+    "label": "Etiqueta",
+    "select": "Seleccionar",
+    "updateSuccess": "Actualizar el éxito."
+  }
+}]

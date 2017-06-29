@@ -1,0 +1,11 @@
+*.iml
+.idea/
+.idea/*
+bower_components
+bower_components/*
+server/vendor
+server/vendor/*
+node_modules
+node_modules/*
+.vscode/*
+debug.log
