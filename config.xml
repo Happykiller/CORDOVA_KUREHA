@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget android-versionCode="17062901" id="org.happykiller.kureha" version="0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Kureha</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A POC for Kureha
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="fabrice.rosito@gmail.com" href="https://kureha.happykiller.net">
+        Kureha Team
     </author>
     <content src="index.html" />
     <access origin="*" />
